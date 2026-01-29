@@ -109,10 +109,10 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl relative z-10 animate-fade-in">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              Pocket Option - торгуйте бинарными
+              Pocket Option -
               <br />
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                опционами с прибылью до 98%
+                торгуйте бинарными опционами с прибылью до 98%
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
