@@ -98,8 +98,10 @@ const Index = () => {
               Pocket Option
             </span>
           </div>
-          <Button className="bg-gradient-to-r from-primary to-secondary text-black font-semibold hover:scale-105 transition-transform">
-            Войти
+          <Button asChild className="bg-gradient-to-r from-primary to-secondary text-black font-semibold hover:scale-105 transition-transform">
+            <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+              Войти
+            </a>
           </Button>
         </div>
       </header>
@@ -121,18 +123,24 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
+                asChild
                 size="lg"
                 className="bg-gradient-to-r from-primary to-secondary text-black font-bold text-lg px-8 py-6 hover:scale-105 transition-transform animate-pulse-glow"
               >
-                Начать торговать
-                <Icon name="ArrowRight" className="ml-2" size={20} />
+                <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                  Начать торговать
+                  <Icon name="ArrowRight" className="ml-2" size={20} />
+                </a>
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="border-primary/50 hover:bg-primary/10 text-lg px-8 py-6"
               >
-                Демо-счет
+                <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                  Демо-счет
+                </a>
               </Button>
             </div>
           </div>
@@ -264,13 +272,17 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex gap-2">
-                <Button className="bg-primary hover:bg-primary/90 text-black font-semibold">
-                  <Icon name="TrendingUp" className="mr-2" size={18} />
-                  ВВЕРХ
+                <Button asChild className="bg-primary hover:bg-primary/90 text-black font-semibold">
+                  <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                    <Icon name="TrendingUp" className="mr-2" size={18} />
+                    ВВЕРХ
+                  </a>
                 </Button>
-                <Button className="bg-red-500 hover:bg-red-600 text-white font-semibold">
-                  <Icon name="TrendingDown" className="mr-2" size={18} />
-                  ВНИЗ
+                <Button asChild className="bg-red-500 hover:bg-red-600 text-white font-semibold">
+                  <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                    <Icon name="TrendingDown" className="mr-2" size={18} />
+                    ВНИЗ
+                  </a>
                 </Button>
               </div>
             </div>
