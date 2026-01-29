@@ -98,8 +98,15 @@ const Index = () => {
               Pocket Option
             </span>
           </div>
-          <Button asChild className="bg-gradient-to-r from-primary to-secondary text-black font-semibold hover:scale-105 transition-transform">
-            <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+          <Button
+            asChild
+            className="bg-gradient-to-r from-primary to-secondary text-black font-semibold hover:scale-105 transition-transform"
+          >
+            <a
+              href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Войти
             </a>
           </Button>
@@ -114,7 +121,7 @@ const Index = () => {
               Pocket Option -
               <br />
               <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-                торгуйте бинарными опционами с прибылью до 98%
+                торговая платформа
               </span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -127,7 +134,11 @@ const Index = () => {
                 size="lg"
                 className="bg-gradient-to-r from-primary to-secondary text-black font-bold text-lg px-8 py-6 hover:scale-105 transition-transform animate-pulse-glow"
               >
-                <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Начать торговать
                   <Icon name="ArrowRight" className="ml-2" size={20} />
                 </a>
@@ -138,7 +149,11 @@ const Index = () => {
                 variant="outline"
                 className="border-primary/50 hover:bg-primary/10 text-lg px-8 py-6"
               >
-                <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Демо-счет
                 </a>
               </Button>
@@ -272,14 +287,28 @@ const Index = () => {
                 </div>
               </div>
               <div className="flex gap-2">
-                <Button asChild className="bg-primary hover:bg-primary/90 text-black font-semibold">
-                  <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  className="bg-primary hover:bg-primary/90 text-black font-semibold"
+                >
+                  <a
+                    href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Icon name="TrendingUp" className="mr-2" size={18} />
                     ВВЕРХ
                   </a>
                 </Button>
-                <Button asChild className="bg-red-500 hover:bg-red-600 text-white font-semibold">
-                  <a href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock" target="_blank" rel="noopener noreferrer">
+                <Button
+                  asChild
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold"
+                >
+                  <a
+                    href="https://u3.shortink.io/register?utm_campaign=27933&utm_source=affiliate&utm_medium=sr&a=ExMs4i5QVqus6Z&ac=pock"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Icon name="TrendingDown" className="mr-2" size={18} />
                     ВНИЗ
                   </a>
