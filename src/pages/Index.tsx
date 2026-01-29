@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [price, setPrice] = useState(1.0845);
   const [priceHistory, setPriceHistory] = useState<number[]>([1.0845]);
   const [isUp, setIsUp] = useState(true);
+  const [openFaq, setOpenFaq] = useState<string | null>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -235,29 +235,35 @@ const Index = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
             Вопросы и <span className="text-primary">ответы</span>
           </h2>
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="license" className="bg-card/50 backdrop-blur border border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold hover:text-primary">
-                Какую лицензию имеет Pocket Option?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Pocket Option — регулируемый международный брокер, работающий по лицензии IFMRRC (Международная комиссия по финансовым рынкам). 
-                Компания зарегистрирована на Маршалловых островах и соответствует всем международным стандартам финансовой безопасности. 
-                Средства клиентов хранятся на сегрегированных счетах отдельно от операционных средств компании.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="binary" className="bg-card/50 backdrop-blur border border-white/10 rounded-lg px-6">
-              <AccordionTrigger className="text-lg font-semibold hover:text-primary">
-                Что такое бинарные опционы?
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground leading-relaxed">
-                Бинарные опционы — это финансовый инструмент, где трейдер прогнозирует движение цены актива (валюты, акции, сырья) за короткий период времени. 
-                Принцип простой: выберите актив, определите направление (вверх/вниз), установите сумму и время экспирации. 
-                Если прогноз верный — получаете фиксированную прибыль до 98%, если нет — теряете инвестированную сумму. 
-                Это делает бинарные опционы одним из самых простых способов торговли на финансовых рынках.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <div className="space-y-4">
+            <Card className="bg-card/50 backdrop-blur border-white/10 p-6 cursor-pointer hover:border-primary/50 transition-all" onClick={() => setOpenFaq(openFaq === 'license' ? null : 'license')}>
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-lg font-semibold">Какую лицензию имеет Pocket Option?</h3>
+                <Icon name={openFaq === 'license' ? 'ChevronUp' : 'ChevronDown'} className="text-primary" size={24} />
+              </div>
+              {openFaq === 'license' && (
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  Pocket Option — регулируемый международный брокер, работающий по лицензии IFMRRC (Международная комиссия по финансовым рынкам). 
+                  Компания зарегистрирована на Маршалловых островах и соответствует всем международным стандартам финансовой безопасности. 
+                  Средства клиентов хранятся на сегрегированных счетах отдельно от операционных средств компании.
+                </p>
+              )}
+            </Card>
+            <Card className="bg-card/50 backdrop-blur border-white/10 p-6 cursor-pointer hover:border-primary/50 transition-all" onClick={() => setOpenFaq(openFaq === 'binary' ? null : 'binary')}>
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-lg font-semibold">Что такое бинарные опционы?</h3>
+                <Icon name={openFaq === 'binary' ? 'ChevronUp' : 'ChevronDown'} className="text-primary" size={24} />
+              </div>
+              {openFaq === 'binary' && (
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  Бинарные опционы — это финансовый инструмент, где трейдер прогнозирует движение цены актива (валюты, акции, сырья) за короткий период времени. 
+                  Принцип простой: выберите актив, определите направление (вверх/вниз), установите сумму и время экспирации. 
+                  Если прогноз верный — получаете фиксированную прибыль до 98%, если нет — теряете инвестированную сумму. 
+                  Это делает бинарные опционы одним из самых простых способов торговли на финансовых рынках.
+                </p>
+              )}
+            </Card>
+          </div>
         </div>
       </section>
 
